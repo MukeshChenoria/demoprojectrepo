@@ -1,0 +1,4 @@
+com\mvnproject\tests\loginTest.class
+com\mvnproject\base\PageBase.class
+com\mvnproject\utilities\TestData.class
+com\mvnproject\pages\LoginPage.class

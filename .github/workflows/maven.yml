@@ -1,0 +1,32 @@
+name: Java Maven CI
+
+on:
+  push:
+    branches:
+      - Demo-Project
+
+  pull_request:
+    branches:
+      - Demo-Project
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '26'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build and test
+        run: mvn clean test
+
+      - name: Package application
+        run: mvn package -DskipTests

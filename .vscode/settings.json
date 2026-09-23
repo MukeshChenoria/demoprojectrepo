@@ -1,0 +1,10 @@
+{
+    "java.autobuild.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.errors.incompleteClasspath.severity": "warning",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.sourcePaths": [
+        "src/main/java",
+        "src/test/java"
+    ]
+}
