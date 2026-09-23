@@ -1,4 +1,7 @@
 com\mvnproject\tests\loginTest.class
+com\mvnproject\pages\AboutPage.class
 com\mvnproject\base\PageBase.class
 com\mvnproject\utilities\TestData.class
+com\mvnproject\tests\AboutPageTest.class
 com\mvnproject\pages\LoginPage.class
+com\mvnproject\utilities\WaitUtils.class

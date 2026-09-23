@@ -1,4 +1,7 @@
 D:\Maven Project\demo\src\test\java\com\mvnproject\base\PageBase.java
+D:\Maven Project\demo\src\test\java\com\mvnproject\utilities\WaitUtils.java
 D:\Maven Project\demo\src\test\java\com\mvnproject\pages\LoginPage.java
 D:\Maven Project\demo\src\test\java\com\mvnproject\tests\loginTest.java
 D:\Maven Project\demo\src\test\java\com\mvnproject\utilities\TestData.java
+D:\Maven Project\demo\src\test\java\com\mvnproject\pages\AboutPage.java
+D:\Maven Project\demo\src\test\java\com\mvnproject\tests\AboutPageTest.java
