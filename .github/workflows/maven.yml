@@ -3,11 +3,11 @@ name: Java Maven CI
 on:
   push:
     branches:
-      - Demo-Project
+      - RemoteBranch
 
   pull_request:
     branches:
-      - Demo-Project
+      - RemoteBranch
 
 jobs:
   build:
@@ -18,6 +18,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Prepare project path used by test data
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path 'D:\Maven Project' | Out-Null
+          Copy-Item -Path '${{ github.workspace }}' -Destination 'D:\Maven Project\demo' -Recurse -Force
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -26,7 +32,9 @@ jobs:
           cache: maven
 
       - name: Build and test
-        run: mvn clean test
+        working-directory: D:\Maven Project\demo
+        run: mvn --batch-mode clean test
 
       - name: Package application
-        run: mvn package -DskipTests
+        working-directory: D:\Maven Project\demo
+        run: mvn --batch-mode package -DskipTests
